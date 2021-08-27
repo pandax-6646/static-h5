@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <Router-view />
-
-    
   </div>
 </template>
 
@@ -15,4 +13,8 @@ export default {
 
 <style>
 @import "./assets/styles/index.css";
+#app {
+  height: 100vh;
+  width: 100vw;
+}
 </style>
