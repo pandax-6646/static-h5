@@ -1,5 +1,5 @@
 import axios from "axios";
-import store from "@/store/index";
+// import store from "@/store/index";
 
 //  创建axios 实例
 const service = axios.create({
@@ -15,7 +15,7 @@ service.interceptors.request.use(
   (config) => {
     //  配置 请求拦截中的 token 是添加 Authorization 还是添加 user-token 取决于后台的设置
     //  config.headers['user-token'] = store.state.user.token;
-    config.headers.Authorization = store.state.user.token;
+    // config.headers.Authorization = store.state.user.token;
     return config;
   },
   (err) => {
@@ -27,7 +27,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (res) => {
     const data = res.data;
-    if (data.code != 666) {
+    if (data.code != 200) {
       console.log(data);
     }
     return data;

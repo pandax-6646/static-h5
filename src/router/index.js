@@ -7,7 +7,7 @@ export default new Router({
   routes: [
     {
       path: "/",
-      redirect: "/discover",
+      redirect: "/login",
     },
 
     // 发现页
@@ -40,4 +40,5 @@ export default new Router({
       component: () => import("views/setting/index"),
     },
   ],
+  mode: 'history',
 });
