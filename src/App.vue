@@ -13,8 +13,5 @@ export default {
 
 <style>
 @import "./assets/styles/index.css";
-#app {
-  height: 100vh;
-  width: 100vw;
-}
+
 </style>

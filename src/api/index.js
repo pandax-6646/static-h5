@@ -15,6 +15,15 @@ export const loginRequest = {
 // 首页请求
 export const homeRequest = {
 
-  // 首页轮播图
-  fetchHomeBanner: () => request.get('home/ba/nner')
+  // 轮播图
+  fetchHomeBanner: () => request.get('home/banner'),
+
+  // 导航栏
+  fetchHomeCategory: () => request.get('home/category'),
+
+  // 列表数据
+  fetchHomeList: () => request.get('home/list'),
+
+  // 案例数据
+  fetchHomeCaseList: () => request.get('home/case'),
 }
