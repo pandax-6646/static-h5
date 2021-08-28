@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>发现页</h2>
+    <h2>知识页</h2>
     <Footer />
   </div>
 </template>

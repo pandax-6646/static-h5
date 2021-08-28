@@ -1,16 +1,23 @@
 <template>
   <div>
     <van-tabbar v-model="active" class="flex jc-sa ai-c">
-      <router-link class="item" to="/discover" active-class="active">
-        <van-tabbar-item icon="music-o"> 发现 </van-tabbar-item>
+      <router-link class="item" to="/home" active-class="active">
+        <van-tabbar-item icon="wap-home-o"> 首页 </van-tabbar-item>
       </router-link>
 
-      <router-link class="item" to="my" active-class="active">
-        <van-tabbar-item icon="circle"> 我的 </van-tabbar-item>
+      <router-link class="item" to="/case" active-class="active">
+        <van-tabbar-item icon="apps-o"> 案例 </van-tabbar-item>
       </router-link>
 
-      <router-link class="item" to="cloud" active-class="active">
-        <van-tabbar-item icon="friends-o"> 云村 </van-tabbar-item>
+      <router-link class="item" to="/knowledge" active-class="active">
+        <van-tabbar-item icon="description"> 知识 </van-tabbar-item>
+      </router-link>
+
+      <router-link class="item" to="/my" active-class="active">
+        <van-tabbar-item icon="friends-o"> 我的 </van-tabbar-item>
+      </router-link>
+      <router-link class="item" to="/demo" active-class="active">
+        <van-tabbar-item icon="friends-o"> demo </van-tabbar-item>
       </router-link>
     </van-tabbar>
   </div>

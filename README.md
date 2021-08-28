@@ -1,4 +1,6 @@
-# music
+# http://www.jisuapp.cn/make/makeapp/1rFDfm4fZg.html  样板
+# https://www.jianshu.com/p/d812ce349265 mokejs
+
 
 ## Project setup
 ```

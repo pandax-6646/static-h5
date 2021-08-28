@@ -7,25 +7,25 @@ export default new Router({
   routes: [
     {
       path: "/",
-      redirect: "/login",
+      redirect: "/home",
     },
 
-    // 发现页
+    // 首页
     {
-      path: "/discover",
-      component: () => import("views/discover/index"),
+      path: "/home",
+      component: () => import("views/home/index"),
     },
 
-    // 我的页
+    // 案例页
     {
-      path: "/my",
-      component: () => import("views/my/index"),
+      path: "/case",
+      component: () => import("views/case/index"),
     },
 
-    // 云村页
+    // 知识页
     {
-      path: "/cloud",
-      component: () => import("views/cloud/index"),
+      path: "/knowledge",
+      component: () => import("views/knowledge/index"),
     },
 
     // 登录页
@@ -34,11 +34,15 @@ export default new Router({
       component: () => import("views/login/index"),
     },
 
-    // 设置页
+    // 我的页
     {
-      path: "/setting",
-      component: () => import("views/setting/index"),
+      path: "/my",
+      component: () => import("views/my/index"),
+    },
+    {
+      path: "/demo",
+      component: () => import("views/demo/index"),
     },
   ],
-  mode: 'history',
+  mode: "history",
 });

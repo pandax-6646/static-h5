@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>云村</h2>
+    <h2>案例</h2>
     <Footer />
   </div>
 </template>
