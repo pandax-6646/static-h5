@@ -9,3 +9,12 @@ export const loginRequest = {
    */
   logon: (params) => request.get("login/cellphone", params),
 };
+
+
+
+// 首页请求
+export const homeRequest = {
+
+  // 首页轮播图
+  fetchHomeBanner: () => request.get('home/ba/nner')
+}

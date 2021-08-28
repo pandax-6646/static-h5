@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { homeRequest } from "api";
+
 export default {
   data() {
     return {
@@ -15,20 +15,11 @@ export default {
     };
   },
   created() {
-    this.getHomeBanner();
+    
   },
 
   methods: {
-    getHomeBanner() {
-      homeRequest
-        .fetchHomeBanner()
-        .then((res) => {
-          this.images = res.banners;
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    },
+    
   },
 };
 </script>

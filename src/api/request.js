@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Toast } from "vant";
 // import store from "@/store/index";
 
 //  创建axios 实例
@@ -25,15 +26,13 @@ service.interceptors.request.use(
 
 //  响应拦截
 service.interceptors.response.use(
-  (res) => {
-    const data = res.data;
-    if (data.code != 200) {
-      console.log(data);
-    }
-    return data;
-  },
+  // 成功响应
+  (res) => res.data.result,
+
+  // 失败响应
   (err) => {
-    return Promise.reject(err);
+    Toast.fail('请求失败，请稍后重试');
+    console.log(err)
   }
 );
 
