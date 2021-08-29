@@ -1,40 +1,15 @@
 <template>
-  <van-swipe :autoplay="3000" :height="220">
-    <van-swipe-item v-for="(image, index) in images" :key="index">
-      <img v-lazy="image" />
-    </van-swipe-item>
-  </van-swipe>
+  <Loading />
 </template>
 
 <script>
-import { homeRequest } from "api";
+import Loading from "components/Loading";
 export default {
-  data() {
-    return {
-      images: [],
-    };
-  },
-  created() {
-    this.getHomeBanner();
-  },
-
-  methods: {
-    getHomeBanner() {
-      homeRequest
-        .fetchHomeBanner()
-        .then((res) => {
-          this.images = res.banners;
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    },
+  components: {
+    Loading,
   },
 };
 </script>
 
-<style lang="less" scoped>
-img {
-  width: 100%;
-}
+<style scoped>
 </style>

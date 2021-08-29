@@ -3,7 +3,6 @@ import request from "./request";
 // 登录页面请求
 export const loginRequest = {
   /**
-   *
    * @param {*} params {phone, password}
    * @returns
    */
@@ -26,4 +25,12 @@ export const homeRequest = {
 
   // 案例数据
   fetchHomeCaseList: () => request.get('home/case'),
+}
+
+
+// 案例页请求
+export const caseRequest = {
+
+  // 案例列表
+  fetchCaseList: () => request.get('case/list')
 }

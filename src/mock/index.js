@@ -1,8 +1,10 @@
-import "./home_moke";
-
 import Mock from "mockjs";
+
+import "./home_mock";
+import './case_mock';
+
 
 // 响应数据时间延迟
 Mock.setup({
-  timeout: "500-1000",
+  timeout: "1000-5000",
 });
