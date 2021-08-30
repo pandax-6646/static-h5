@@ -18,7 +18,7 @@ export const homeRequest = {
    *详情页数据
    * @param {*} params id
    */
-  fetchHomeDetail: (params) => request.get("home/detail", params),
+  fetchHomeDetail: (params) => request.get("/home/detail", params),
 };
 
 // 案例页请求

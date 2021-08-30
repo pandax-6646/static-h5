@@ -59,10 +59,10 @@ Mock.mock("home/case", "get", {
 });
 
 // 详情数据
-Mock.mock("home/detail", "get", {
+Mock.mock(/^\/home\/detail(\?.+)?$/, "get", {
   code: 200,
   msg: "success",
   result: {
-    "imageUrls|10-30": ["@Image('375x235','@color','case')"],
+    "imageUrls|10-30": ["@Image('290x420','@color','detail')"],
   },
 });

@@ -14,12 +14,10 @@ export default new Router({
     {
       path: "/home",
       component: () => import("views/home/index"),
-      children: [
-        {
-          path: "detail/:id",
-          component: () => import("views/home/children/Detail"),
-        },
-      ],
+    },
+    {
+      path: "/detail/:id",
+      component: () => import("views/detail/index"),
     },
 
     // 案例页

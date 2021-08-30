@@ -33,7 +33,7 @@
         </div>
         <div class="item-img ta-c flex jc-sb">
           <router-link
-            :to="`/home/detail/${item.id}`"
+            :to="`/detail/${item.id}`"
             class="mr-10"
             v-for="(product, index) in item.products"
             :key="index"
@@ -106,7 +106,9 @@ export default {
     getHomeBanner() {
       homeRequest.fetchHomeBanner().then((res) => {
         this.banners = res.banners;
-        this.isLoading = false;
+        this.$nextTick(() => {
+          this.isLoading = false;
+        });
       });
     },
 
