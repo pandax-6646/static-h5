@@ -68,7 +68,7 @@ export default {
         this.$toast.success("登录成功");
         this.$store.commit("updateToken", res.token);
         this.$store.commit("updatePhone", res.phone);
-        // this.$router.push(-1);
+        this.$router.push("/my");
         console.log(res);
       });
     },

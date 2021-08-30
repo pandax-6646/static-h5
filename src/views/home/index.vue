@@ -32,14 +32,15 @@
           <p class="mt-5 mb-5">{{ item.titleE }}</p>
         </div>
         <div class="item-img ta-c flex jc-sb">
-          <div
+          <router-link
+            :to="`/home/detail/${item.id}`"
             class="mr-10"
             v-for="(product, index) in item.products"
             :key="index"
           >
             <img :src="product.imageUrl" alt="" />
             <span class="mt-10 fs-13">{{ product.dec }}</span>
-          </div>
+          </router-link>
 
           <div class="see-more flex ai-c fd-c jc-c fc-fff">
             <span class="fs-13">查看更多</span>

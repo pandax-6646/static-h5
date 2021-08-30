@@ -1,3 +1,5 @@
+import { Dialog } from "vant";
+
 export default {
   methods: {
     /**
@@ -9,11 +11,11 @@ export default {
      */
     dialog(
       success,
+      message = "是否确认删除",
       fail = () => {
         this.$toast.success("已取消");
       },
-      title = "提示",
-      message = "是否确认删除"
+      title = "提示"
     ) {
       Dialog.confirm({
         title,

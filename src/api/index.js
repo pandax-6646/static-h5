@@ -17,7 +17,6 @@ export const homeRequest = {
   /**
    *详情页数据
    * @param {*} params id
-   * @returns
    */
   fetchHomeDetail: (params) => request.get("home/detail", params),
 };

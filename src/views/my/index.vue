@@ -80,11 +80,15 @@ export default {
   mixins: [mixin],
   methods: {
     logout() {
-      dialog(
-        myRequest.fetchLogout().then((res) => {
-          console.log(res);
-        })
-      );
+      this.dialog(this.logoutHandle, "是否确认删除");
+    },
+
+    logoutHandle() {
+      myRequest.fetchLogout().then((res) => {
+        this.$toast.success("退出成功");
+        this.$store.commit("updatePhone", "");
+        this.$store.commit("updateToken", "");
+      });
     },
   },
 };
