@@ -9,28 +9,36 @@ export const loginRequest = {
   logon: (params) => request.get("login/cellphone", params),
 };
 
-
-
 // 首页请求
 export const homeRequest = {
-
   // 轮播图
-  fetchHomeBanner: () => request.get('home/banner'),
+  fetchHomeBanner: () => request.get("home/banner"),
 
   // 导航栏
-  fetchHomeCategory: () => request.get('home/category'),
+  fetchHomeCategory: () => request.get("home/category"),
 
   // 列表数据
-  fetchHomeList: () => request.get('home/list'),
+  fetchHomeList: () => request.get("home/list"),
 
   // 案例数据
-  fetchHomeCaseList: () => request.get('home/case'),
-}
+  fetchHomeCaseList: () => request.get("home/case"),
 
+  /**
+   *详情页数据
+   * @param {*} params id
+   * @returns
+   */
+  fetchHomeDetail: (params) => request.get("home/detail", params),
+};
 
 // 案例页请求
 export const caseRequest = {
-
   // 案例列表
-  fetchCaseList: () => request.get('case/list')
-}
+  fetchCaseList: () => request.get("case/list"),
+};
+
+// 知识页请求
+export const konwledgeRequest = {
+  // 知识列表
+  fetchKonwledgeList: () => request.get("knowledge/list"),
+};

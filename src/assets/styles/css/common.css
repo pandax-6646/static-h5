@@ -12,6 +12,19 @@ body { background: #ebebeb; }
 .pos-s { position: absolute; }
 .ta-c { text-align: center; }
 
+/* 居中元素 */
+.flex-cc{ 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+.pos-cc{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
 /* flex公共样式 */
 .flex {display: flex;}
 .fw-w {flex-wrap: wrap;}
