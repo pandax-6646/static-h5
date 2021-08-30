@@ -2,7 +2,19 @@
   <div class="my-container">
     <div class="user-info wp-100 flex ai-c">
       <img src="~assets/images/avatar.png" alt="" />
-      <span class="ml-10 fc-fff">立即登录</span>
+
+      <div v-if="$store.state.token">
+        <span class="ml-10 fc-fff">{{
+          $store.state.phone.replace(/(\d{3})(\d{4})(\d{3})/, "$1***$3")
+        }}</span>
+
+        <span class="ml-20" style="text-decoration: underline" @click="logout"
+          >退出</span
+        >
+      </div>
+      <span class="ml-10 fc-fff" v-else @click="$router.push('/login')"
+        >立即登录</span
+      >
     </div>
     <div class="goods-info wp-100 bc-fff flex fw-w ac-sa jc-sb mt-10 mb-10">
       <div class="info-item flex-cc fd-c">
@@ -59,9 +71,21 @@
 
 <script>
 import Footer from "components/Footer";
+import { myRequest } from "api";
+import mixin from "mixins";
 export default {
   components: {
     Footer,
+  },
+  mixins: [mixin],
+  methods: {
+    logout() {
+      dialog(
+        myRequest.fetchLogout().then((res) => {
+          console.log(res);
+        })
+      );
+    },
   },
 };
 </script>

@@ -1,14 +1,5 @@
 import request from "./request";
 
-// 登录页面请求
-export const loginRequest = {
-  /**
-   * @param {*} params {phone, password}
-   * @returns
-   */
-  logon: (params) => request.get("login/cellphone", params),
-};
-
 // 首页请求
 export const homeRequest = {
   // 轮播图
@@ -41,4 +32,22 @@ export const caseRequest = {
 export const konwledgeRequest = {
   // 知识列表
   fetchKonwledgeList: () => request.get("knowledge/list"),
+};
+
+// 我的页面请求
+export const myRequest = {
+  /**
+   * 获取验证码
+   * @param {*} params phone
+   */
+  fetchSmsCode: (params) => request.post("my/getSmsCode", params),
+
+  /**
+   * 登录
+   * @param {*} params {phone, smsCode}
+   */
+  fetchLogin: (params) => request.post("my/login", params),
+
+  // 登出
+  fetchLogout: () => request.get("my/logout"),
 };

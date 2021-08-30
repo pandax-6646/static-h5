@@ -12,6 +12,7 @@ module.exports = {
       .set("@", resolve("src"))
       .set("api", resolve("src/api"))
       .set("views", resolve("src/views"))
+      .set("mixins", resolve("src/mixins"))
       .set("assets", resolve("src/assets"))
       .set("components", resolve("src/components"));
   },
